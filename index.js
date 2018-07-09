@@ -12,7 +12,7 @@ const englishBrailleMap = new Map(englishToBrailleLiteralSet);
 function braileconvert() {
   let brailleString = '';
   const input = document.getElementById('sourceLangText').value;
-  for (let i = 0; i < input.length; i += 1) {
+  for (let i = 0; i <= input.length - 1; i += 1) {
     brailleString += englishBrailleMap.get(input[i]);
   }
   document.getElementById('targetLangText').innerHTML = brailleString;
